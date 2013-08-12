@@ -2,9 +2,9 @@ a href="/inu" 犬になる
 ul
   - @dogs.each do |dog|
     li
-      a href="/#{dog.nickname}"
+      a href="http://twitter.com/#{dog.nickname}" target="_blank"
         img src="#{dog.image}" alt="#{dog.name}" width="16" height="16"
       span title="#{dog.created_at}" #{timeago(dog.created_at)}
       | に
-      a href="/#{dog.nickname}" #{dog.name}
+      a href="http://twitter.com/#{dog.nickname}" target="_blank" #{dog.name}
       | が犬になりました
