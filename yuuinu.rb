@@ -17,7 +17,7 @@ configure :production do
   DB = Sequel.connect("mysql2://#{db[:user]}:#{db[:password]}@#{db[:host]}/#{db[:dbname]}")
 end
 
-class Database < Sequel::Model
+class Databases < Sequel::Model
   unless table_exists?
     set_schema do
       primary_key :id
