@@ -3,6 +3,8 @@ ul
   - @checkins.each do |checkin|
     li
       a href="/#{checkin.nickname}"
-        img src="#{checkin.image}" alt="#{checkin.nickname}" width="16" height="16"
-        = checkin.nickname
-      | &nbsp;がいました&nbsp;#{timeago(checkin.created_at)}
+        img src="#{checkin.image}" alt="#{checkin.name}" width="16" height="16"
+      span title="#{checkin.created_at}" #{timeago(checkin.created_at)}
+      | に
+      a href="/#{checkin.nickname}" #{checkin.name}
+      | がいました

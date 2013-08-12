@@ -22,6 +22,7 @@ class Database < Sequel::Model
     set_schema do
       primary_key :id
       String :uid
+      String :name
       String :nickname
       String :image
       String :token
@@ -94,6 +95,7 @@ end
 get "/auth/:provider/callback" do
   auth = request.env['omniauth.auth']
   session['uid'] = auth['uid']
+  session['name'] = auth['info']['name']
   session['nickname'] = auth['info']['nickname']
   session['image'] = auth['info']['image']
   session['token'] = auth['credentials']['token']
@@ -101,6 +103,7 @@ get "/auth/:provider/callback" do
   tweet('悠になりたかった犬にいます http://yuui.nu/')
   Database.create(
     :uid => session['uid'],
+    :name => session['name'],
     :nickname => session['nickname'],
     :image => session['image'],
     :token => session['token'],
