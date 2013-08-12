@@ -88,11 +88,11 @@ error do
 end
 
 get "/" do
-  @checkins = Database.order_by(:id.desc)
+  @dogs = Database.order_by(:id.desc)
   slim :index
 end
 
-get "/checkin" do
+get "/inu" do
   redirect "/auth/twitter"
 end
 
@@ -104,7 +104,7 @@ get "/auth/:provider/callback" do
   session['image'] = auth['info']['image']
   session['token'] = auth['credentials']['token']
   session['secret'] = auth['credentials']['secret']
-  tweet('悠になりたかった犬にいます http://yuui.nu/')
+  tweet(session['name'] + 'が犬になりました http://yuui.nu/')
   Database.create(
     :uid => session['uid'],
     :name => session['name'],

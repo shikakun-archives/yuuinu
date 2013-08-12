@@ -1,10 +1,10 @@
-a href="/checkin" います
+a href="/inu" 犬になる
 ul
-  - @checkins.each do |checkin|
+  - @dogs.each do |dog|
     li
-      a href="/#{checkin.nickname}"
-        img src="#{checkin.image}" alt="#{checkin.name}" width="16" height="16"
-      span title="#{checkin.created_at}" #{timeago(checkin.created_at)}
+      a href="/#{dog.nickname}"
+        img src="#{dog.image}" alt="#{dog.name}" width="16" height="16"
+      span title="#{dog.created_at}" #{timeago(dog.created_at)}
       | に
-      a href="/#{checkin.nickname}" #{checkin.name}
-      | がいました
+      a href="/#{dog.nickname}" #{dog.name}
+      | が犬になりました
