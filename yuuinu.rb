@@ -87,8 +87,7 @@ get "/auth/:provider/callback" do
     :nickname => session['nickname'],
     :image => session['image'],
     :token => session['token'],
-    :secret => session['secret'],
-    :address => session['address']
+    :secret => session['secret']
   )
   redirect "/"
 end
