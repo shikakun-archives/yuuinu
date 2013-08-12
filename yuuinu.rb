@@ -10,14 +10,14 @@ db = {
 }
 
 configure :development do
-  DB = Sequel.connect("sqlite://databases.db")
+  DB = Sequel.connect("sqlite://yuuinu.db")
 end
 
 configure :production do
   DB = Sequel.connect("mysql2://#{db[:user]}:#{db[:password]}@#{db[:host]}/#{db[:dbname]}")
 end
 
-class Databases < Sequel::Model
+class YuuInuTable < Sequel::Model
   unless table_exists?
     set_schema do
       primary_key :id
@@ -89,7 +89,7 @@ error do
 end
 
 get "/" do
-  @dogs = Databases.order_by(:id.desc)
+  @dogs = YuuInuTable.order_by(:id.desc)
   slim :index
 end
 
@@ -106,7 +106,7 @@ get "/auth/:provider/callback" do
   session['token'] = auth['credentials']['token']
   session['secret'] = auth['credentials']['secret']
   tweet(session['name'] + 'が犬になりました http://yuui.nu/')
-  Databases.create(
+  YuuInuTable.create(
     :uid => session['uid'],
     :name => session['name'],
     :nickname => session['nickname'],
