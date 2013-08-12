@@ -10,7 +10,7 @@ db = {
 }
 
 configure :development do
-  DB = Sequel.connect("sqlite://database.db")
+  DB = Sequel.connect("sqlite://databases.db")
 end
 
 configure :production do
@@ -88,7 +88,7 @@ error do
 end
 
 get "/" do
-  @dogs = Database.order_by(:id.desc)
+  @dogs = Databases.order_by(:id.desc)
   slim :index
 end
 
@@ -105,7 +105,7 @@ get "/auth/:provider/callback" do
   session['token'] = auth['credentials']['token']
   session['secret'] = auth['credentials']['secret']
   tweet(session['name'] + 'が犬になりました http://yuui.nu/')
-  Database.create(
+  Databases.create(
     :uid => session['uid'],
     :name => session['name'],
     :nickname => session['nickname'],

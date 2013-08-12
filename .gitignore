@@ -1,6 +1,6 @@
 .bundle
 .env
 .sass-cache
-database.db
+databases.db
 vendor/bundle
 
