@@ -1,6 +1,6 @@
 .bundle
 .env
 .sass-cache
-databases.db
+yuuinu.db
 vendor/bundle
 
