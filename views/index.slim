@@ -1,9 +1,34 @@
-a href="/inu" 犬になる
-ul
-  - @dogs.each do |dog|
-    li
-      a href="http://twitter.com/#{dog.nickname}" target="_blank"
-        img src="#{dog.image}" alt="#{dog.name}" width="16" height="16"
-      span title="#{dog.created_at}" #{timeago(dog.created_at)}
-      a href="http://twitter.com/#{dog.nickname}" target="_blank" #{dog.name}
-      | が犬になりました
+section#video
+  erb
+    <iframe id="youtube" width="853" height="480" src="//www.youtube.com/embed/zYWpX9Tfp_I" frameborder="0" allowfullscreen></iframe>
+section#inu
+  a href="/inu" 犬になる
+  ul#dogs
+    - @dogs.each do |dog|
+      li.dog
+        a href="http://twitter.com/#{dog.nickname}" target="_blank"
+          img src="#{dog.image}" alt="#{dog.name}" width="16" height="16"
+        span title="#{dog.created_at}" #{timeago(dog.created_at)}
+        a href="http://twitter.com/#{dog.nickname}" target="_blank" #{dog.name}
+        | が犬になりました
+section#about
+  img#about-background src="/images/about_background.png" alt=""
+  div#about-content
+    h1#title 悠になりたかった犬
+    p#outline
+      | 魔法で犬にされてしまった悠は、カレーを欲して神保町をさまよい歩く
+      br
+      | 悠のいなくなったスタジオに残されたアーティストの未央とひと美
+      br
+      | スタジオにおとずれるさまざまな人々を巻き込んで、まいご犬・悠の捜索活動が始まる！
+    p#release 2013年夏 公開
+    table#datas.table
+      tbody
+        tr.data.tr
+          th.th 監督・脚本
+          td.td 青柳菜摘 沼田友 地主麻衣子 石田祐規
+        tr.data.tr
+          th.th 製作・著作
+          td.td「悠になりたかった犬」製作委員会
+    p#powered
+      a href="http://tadameshiyama.tumblr.com/" target="_blank" 試聴室 公開制作 ータダ飯を山で食う
