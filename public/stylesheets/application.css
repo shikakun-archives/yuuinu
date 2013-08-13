@@ -132,6 +132,7 @@ a:hover {
 
 #about {
 	position: relative;
+	background-color: #000;
 }
 
 #about-background {
@@ -183,7 +184,6 @@ a:hover {
 	position: absolute;
 	bottom: 40px;
 	right: 20px;
-	display: inline;
 }
 
 #powered a {
@@ -197,4 +197,43 @@ a:hover {
 	left: 20px;
 }
 
+.smartphone-only {
+	display: none;
+}
 
+@media screen and (max-width: 680px){
+	.pc-only {
+		display: none;
+	}
+
+	.smartphone-only {
+		display: inline;
+	}
+
+	#dogging {
+		width: 280px;
+	}
+
+	#about {
+		padding-bottom: 40px;
+		font-size: 14px !important;
+	}
+
+	.th,
+	.td {
+		font-size: 14px !important;
+	}
+
+	#about-content {
+		position: relative;
+	}
+
+	#powered,
+	#share {
+		position: relative;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		padding: 10px 20px;
+	}
+}
