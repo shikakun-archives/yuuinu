@@ -77,8 +77,53 @@ body {
 	font-size: 16px;
 }
 
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #16a085;
+}
+
 #youtube {
 	width: 100%;
 	margin: 0 auto;
 	display: block;
+}
+
+#inu {
+	padding: 60px 0;
+}
+
+#dogging {
+	width: 320px;
+	height: 50px;
+	margin: 0 auto 40px;
+	display: block;
+	text-align: center;
+	color: #ffffff !important;
+	font-size: 16px;
+	line-height: 50px;
+	background-color: #1abc9c;
+	border: 0px solid #909090;
+	border-radius: 3px;
+	text-shadow: 0 -1px #16a085;
+	box-shadow: 0 2px 0 #16a085, 0 -1px 0 #25dcb7;
+}
+
+#dogs {
+	margin: 0 auto;
+}
+
+.dog {
+	padding: 5px 20px;
+	text-align: center;
+	display: block;
+}
+
+.dog img {
+	margin-right: 5px;
+	vertical-align: top;
+	display: inline-block;
 }
