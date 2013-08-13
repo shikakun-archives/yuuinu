@@ -127,3 +127,32 @@ a:hover {
 	vertical-align: top;
 	display: inline-block;
 }
+
+#about {
+	position: relative;
+}
+
+#about-background {
+	width: 100%;
+	height: auto;
+}
+
+#about-content {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	color: #fff;
+}
+
+#powered {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+
+#share {
+	position: absolute;
+	height: 20px;
+	bottom: 20px;
+	left: 20px;
+}
