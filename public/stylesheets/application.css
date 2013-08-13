@@ -73,7 +73,7 @@ object,object:focus { outline:none; }
 
 /* details */
 body {
-	font-family: 'KoushikiSans', sans-serif;
+	font-family: 'KoushikiSans', 'Gothic Medium BBB', sans-serif;
 	font-size: 16px;
 }
 
