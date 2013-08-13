@@ -83,7 +83,8 @@ a {
 }
 
 a:hover {
-	color: #16a085;
+	color: #16a085 !important;
+	text-decoration: underline !important;
 }
 
 #youtube {
@@ -105,6 +106,7 @@ a:hover {
 	color: #ffffff !important;
 	font-size: 16px;
 	line-height: 50px;
+	text-decoration: none !important;
 	background-color: #1abc9c;
 	border: 0px solid #909090;
 	border-radius: 3px;
@@ -179,14 +181,19 @@ a:hover {
 
 #powered {
 	position: absolute;
-	bottom: 20px;
+	bottom: 40px;
 	right: 20px;
+	display: inline;
+}
+
+#powered a {
+	color: #fff;
 }
 
 #share {
 	position: absolute;
 	height: 20px;
-	bottom: 20px;
+	bottom: 40px;
 	left: 20px;
 }
 
