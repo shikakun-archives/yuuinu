@@ -139,9 +139,42 @@ a:hover {
 
 #about-content {
 	position: absolute;
-	top: 20px;
-	left: 20px;
+	top: 0;
+	left: 0;
+	padding: 40px 20px;
 	color: #fff;
+}
+
+#title {
+	margin-bottom: 20px;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+#outline {
+	margin-bottom: 20px;
+	line-height: 24px;
+}
+
+#release {
+	line-height: 24px;
+}
+
+.table {
+	border-collapse: separate;
+	border-spacing: 0 20px;
+}
+
+.th {
+	padding: 0 20px 0 0;
+	font-size: 16px;
+	font-weight: normal;
+	border-right: 1px solid #fff;
+}
+
+.td {
+	padding: 0 0 0 20px;
+	font-size: 16px;
 }
 
 #powered {
@@ -156,3 +189,5 @@ a:hover {
 	bottom: 20px;
 	left: 20px;
 }
+
+
