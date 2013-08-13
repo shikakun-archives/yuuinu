@@ -1,25 +1,62 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
 
-html {
-	font-size: 90%;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
+@font-face {
+    font-family: 'LigatureSymbols';
+    src: url('/fonts/LigatureSymbols/LigatureSymbols-2.11.eot');
+    src: url('/fonts/LigatureSymbols/LigatureSymbols-2.11.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/LigatureSymbols/LigatureSymbols-2.11.woff') format('woff'),
+         url('/fonts/LigatureSymbols/LigatureSymbols-2.11.ttf') format('truetype'),
+         url('/fonts/LigatureSymbols/LigatureSymbols-2.11.svg#LigatureSymbols') format('svg');
+    src: url('/fonts/LigatureSymbols/LigatureSymbols-2.11.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.lsf, .lsf-icon:before {
+  font-family: 'LigatureSymbols';
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.lsf-icon:before {
+  content:attr(title);
+  margin-right:0.3em;
+  font-size:130%;
+}
+
+@font-face {
+    font-family: 'KoushikiSans';
+    src: url('/fonts/KoushikiSans/KoushikiSans-Light.eot');
+    src: url('/fonts/KoushikiSans/KoushikiSans-Light.eot') format('embedded-opentype'),
+         url('/fonts/KoushikiSans/KoushikiSans-Light.woff') format('woff'),
+         url('/fonts/KoushikiSans/KoushikiSans-Light.ttf') format('truetype'),
+         url('/fonts/KoushikiSans/KoushikiSans-Light.otf') format('opentype');
+    src: url('/fonts/KoushikiSans/KoushikiSans-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KoushikiSans';
+    src: url('/fonts/KoushikiSans/KoushikiSans-Regular.eot');
+    src: url('/fonts/KoushikiSans/KoushikiSans-Regular.eot') format('embedded-opentype'),
+         url('/fonts/KoushikiSans/KoushikiSans-Regular.woff') format('woff'),
+         url('/fonts/KoushikiSans/KoushikiSans-Regular.ttf') format('truetype'),
+         url('/fonts/KoushikiSans/KoushikiSans-Regular.otf') format('opentype');
+    src: url('/fonts/KoushikiSans/KoushikiSans-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
 
 body {
-	color: #000000;
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	font-size: 100%;
-	z-index: 1;
-}
-
-a {
-	color: #000000;
-	text-decoration: none;
-}
-
-a:hover {
-	color: #000000;
-	text-decoration: none;
+	font-family: 'KoushikiSans', sans-serif;
+	font-size: 16px;
 }
