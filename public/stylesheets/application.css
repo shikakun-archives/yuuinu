@@ -17,18 +17,6 @@ object,object:focus { outline:none; }
 /* font */
 @font-face {
     font-family: 'KoushikiSans';
-    src: url('/fonts/KoushikiSans/KoushikiSans-Light.eot');
-    src: url('/fonts/KoushikiSans/KoushikiSans-Light.eot') format('embedded-opentype'),
-         url('/fonts/KoushikiSans/KoushikiSans-Light.woff') format('woff'),
-         url('/fonts/KoushikiSans/KoushikiSans-Light.ttf') format('truetype'),
-         url('/fonts/KoushikiSans/KoushikiSans-Light.otf') format('opentype');
-    src: url('/fonts/KoushikiSans/KoushikiSans-Light.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'KoushikiSans';
     src: url('/fonts/KoushikiSans/KoushikiSans-Regular.eot');
     src: url('/fonts/KoushikiSans/KoushikiSans-Regular.eot') format('embedded-opentype'),
          url('/fonts/KoushikiSans/KoushikiSans-Regular.woff') format('woff'),
@@ -73,7 +61,7 @@ object,object:focus { outline:none; }
 
 /* details */
 body {
-	font-family: 'KoushikiSans', 'Gothic Medium BBB', sans-serif;
+	font-family: 'Gothic Medium BBB', sans-serif;
 	font-size: 16px;
 }
 
