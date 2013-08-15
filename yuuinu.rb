@@ -109,7 +109,7 @@ get "/auth/:provider/callback" do
   if YuuInuTable.filter(uid: session['uid']).empty?
     tweet(session['name'] + 'が犬になりました http://yuui.nu/')
   else
-    tweet(session['name'] + 'はひきつづき犬のままです http://yuui.nu/')
+    tweet(session['name'] + 'は犬のままです http://yuui.nu/')
   end
   YuuInuTable.create(
     :uid => session['uid'],
