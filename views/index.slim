@@ -12,7 +12,10 @@ section#inu
           img src="#{dog.image}" alt="#{dog.name}" width="16" height="16"
         span title="#{dog.created_at}" #{timeago(dog.created_at)}
         a href="http://twitter.com/#{dog.nickname}" target="_blank" #{dog.name}
-        | が犬になりました
+        - if @repeater.include?("#{dog.uid}")
+          | は犬です
+        - else
+          | が犬になりました
 section#about
   img#about-background src="/images/about_background.png" alt=""
   div#about-content
