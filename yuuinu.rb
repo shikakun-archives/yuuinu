@@ -81,7 +81,7 @@ not_found do
 end
 
 error do
-  redirect "/" 
+  redirect "/inu"
 end
 
 get "/" do
