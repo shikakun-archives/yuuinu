@@ -3,4 +3,5 @@
 .sass-cache
 yuuinu.db
 vendor/bundle
+tmp/
 
