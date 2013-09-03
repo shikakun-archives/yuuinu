@@ -190,6 +190,10 @@ a:hover {
 	line-height: 24px;
 }
 
+#release a {
+  color: #fff;
+}
+
 .table {
 	border-collapse: separate;
 	border-spacing: 0 20px;
