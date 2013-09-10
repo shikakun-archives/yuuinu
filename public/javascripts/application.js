@@ -1,12 +1,14 @@
 $(function() {
   video_size_setting();
 
-  var default_video = 'v3pre';
+  var default_video = 'v3';
   var youtube_id = {
     'v1': 'DomXocSJ-ZE',
     'v2pre': 'y0IgRZn9QT8',
     'v2': '0p7Tdqo6uyY',
-    'v3pre': '4I6MeeGCKhI'
+    'v3pre': '4I6MeeGCKhI',
+    'v3': 'bqbNAjp3S1E',
+    'v4': '7dcgWvyQMDw'
   };
   $('#youtube').attr('src', '//www.youtube.com/embed/' + youtube_id[default_video] + '?autoplay=1&vq=hd1080');
   $('#' + default_video).addClass('active');
